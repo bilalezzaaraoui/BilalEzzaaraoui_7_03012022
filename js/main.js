@@ -19,8 +19,7 @@ class App {
   constructor() {
     this.getData();
     this.getTags();
-    this.searchMethod();
-    // this.searchNative();
+    this.searchNative();
     this.tagsText();
     this.tagsFilter();
   }
@@ -131,59 +130,6 @@ class App {
 
         const allResults = titleArr.concat(descriptionArr, ingredientArr);
         const filteredResults = [...new Set(allResults)];
-        this.searchData = filteredResults;
-
-        if (value.length >= 3 && this.searchData.length === 0) {
-          this.updateUi(
-            undefined,
-            `Aucune recette ne correspond à votre critère "${value}" vous pouvez chercher « tarte aux pommes », « poisson ».`
-          );
-          document.querySelector(".data-box").style.display = "block";
-        } else {
-          this.renderArrays();
-        }
-      } else {
-        this.searchData = [];
-        document.querySelector(".data-box").style.display = "grid";
-        this.renderArrays();
-      }
-    });
-  }
-
-  searchMethod() {
-    const recipeLight = recipes.map((el) => {
-      return {
-        id: el.id,
-        name: el.name,
-        ingredients: el.ingredients,
-        description: el.description,
-        time: el.time,
-      };
-    });
-
-    inputSearch.addEventListener("input", () => {
-      const value = inputSearch.value.toLowerCase();
-
-      if (value.length >= 3) {
-        const titleArr = recipeLight.filter((el) => {
-          if (el.name.toLowerCase().includes(value)) return el;
-        });
-
-        const descriptionArr = recipeLight.filter((el) => {
-          if (el.description.toLowerCase().includes(value)) return el;
-        });
-
-        const ingredientArr = recipeLight.filter((item) =>
-          item.ingredients.find((el) => {
-            if (el.ingredient.toLowerCase().includes(value)) {
-              return item;
-            }
-          })
-        );
-
-        const allResults = titleArr.concat(descriptionArr, ingredientArr);
-        const filteredResults = [...new Set(allResults)];
-
         this.searchData = filteredResults;
 
         if (value.length >= 3 && this.searchData.length === 0) {
