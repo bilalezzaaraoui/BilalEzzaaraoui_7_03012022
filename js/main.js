@@ -20,7 +20,6 @@ class App {
     this.getData();
     this.getTags();
     this.searchMethod();
-    // this.searchNative();
     this.tagsText();
     this.tagsFilter();
   }
@@ -77,76 +76,6 @@ class App {
           icon.classList.replace("fa-chevron-down", "fa-chevron-up");
         }
       });
-    });
-  }
-
-  searchNative() {
-    const recipeLight = [];
-    const recipeObj = (data) => {
-      const obj = {
-        id: data.id,
-        name: data.name,
-        ingredients: data.ingredients,
-        description: data.description,
-        time: data.time,
-      };
-      recipeLight.push(obj);
-    };
-    for (let i = 0; i < recipes.length; i++) {
-      recipeObj(recipes[i]);
-    }
-
-    inputSearch.addEventListener("input", () => {
-      const value = inputSearch.value.toLowerCase();
-
-      if (value.length >= 3) {
-        const titleArr = [];
-        for (let i = 0; i < recipeLight.length; i++) {
-          if (recipeLight[i].name.toLowerCase().includes(value)) {
-            titleArr.push(recipeLight[i]);
-          }
-        }
-
-        const descriptionArr = [];
-        for (let i = 0; i < recipeLight.length; i++) {
-          if (recipeLight[i].description.toLowerCase().includes(value)) {
-            descriptionArr.push(recipeLight[i]);
-          }
-        }
-
-        const ingredientArr = [];
-
-        for (let i = 0; i < recipeLight.length; i++) {
-          for (let j = 0; j < recipeLight[i].ingredients.length; j++) {
-            if (
-              recipeLight[i].ingredients[j].ingredient
-                .toLowerCase()
-                .includes(value)
-            ) {
-              ingredientArr.push(recipeLight[i]);
-              break;
-            }
-          }
-        }
-
-        const allResults = titleArr.concat(descriptionArr, ingredientArr);
-        const filteredResults = [...new Set(allResults)];
-        this.searchData = filteredResults;
-
-        if (value.length >= 3 && this.searchData.length === 0) {
-          this.updateUi(
-            undefined,
-            `Aucune recette ne correspond à votre critère "${value}" vous pouvez chercher « tarte aux pommes », « poisson ».`
-          );
-          document.querySelector(".data-box").style.display = "block";
-        } else {
-          this.renderArrays();
-        }
-      } else {
-        this.searchData = [];
-        document.querySelector(".data-box").style.display = "grid";
-        this.renderArrays();
-      }
     });
   }
 
