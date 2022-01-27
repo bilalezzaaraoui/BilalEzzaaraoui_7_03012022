@@ -1,0 +1,309 @@
+@import "partial/variable";
+@import "media";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font;
+  width: 90%;
+  margin: auto;
+
+  header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    a {
+      margin-top: 2rem;
+    }
+
+    .logo-title {
+      margin: 0;
+      color: $red;
+    }
+  }
+
+  main {
+    .input-box {
+      margin-top: 1rem;
+      display: flex;
+      width: 100%;
+
+      ::placeholder {
+        color: $inputText;
+        font-weight: normal;
+      }
+
+      input {
+        width: 100%;
+        background-color: $inputBg;
+        border: none;
+        padding: 1rem 0 1rem 1rem;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .icon-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $inputBg;
+        width: 60px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        i {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .tags-icon-box {
+      width: 100%;
+      margin: 2rem 0 0 0;
+      position: relative;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          margin-right: 1rem;
+          margin-bottom: 0.5rem;
+          padding: 0.7rem 1.2rem;
+          border-radius: 5px;
+          position: relative;
+          color: #fff;
+          display: flex;
+
+          i {
+            padding-left: 0.5rem;
+            font-size: 1.2rem;
+          }
+        }
+
+        .ingredients {
+          background-color: $blueInput;
+        }
+        .appareil {
+          background-color: $greenInput;
+        }
+        .ustensile {
+          background-color: $redInput;
+        }
+      }
+    }
+
+    .tags-box {
+      margin-top: 1.5rem;
+      display: flex;
+      position: relative;
+
+      .dropdown {
+        position: relative;
+
+        .tags-container {
+          margin-right: 2rem;
+          display: flex;
+          align-items: center;
+
+          ::placeholder {
+            color: #fff;
+          }
+
+          input {
+            border: none;
+            padding: 0.8rem 0.4rem 0.8rem 1rem;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            color: #fff;
+            height: 3.5rem;
+            // width: 15rem;
+          }
+
+          input:focus {
+            outline: none;
+          }
+
+          .tags-icon {
+            height: 3.5rem;
+            width: 30px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            position: relative;
+            right: 1rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            i {
+              color: #fff;
+              font-weight: bold;
+            }
+          }
+        }
+
+        // Design de l'input
+        .ingredients {
+          input {
+            background-color: $blueInput;
+          }
+
+          .tags-icon {
+            background-color: $blueInput;
+          }
+        }
+        .appareil {
+          input {
+            background-color: $greenInput;
+          }
+
+          .tags-icon {
+            background-color: $greenInput;
+          }
+        }
+        .ustensiles {
+          input {
+            background-color: $redInput;
+          }
+
+          .tags-icon {
+            background-color: $redInput;
+          }
+        }
+
+        // Design de la liste
+        ul {
+          z-index: 10;
+          margin-top: -0.1rem;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          column-gap: 2rem;
+          position: absolute;
+          padding: 1.5rem;
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+          border-bottom-left-radius: 3px;
+
+          li {
+            padding-bottom: 0.7rem;
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+
+        .list-ingredients {
+          background-color: $blueInput;
+        }
+
+        .list-appareil {
+          background-color: $greenInput;
+        }
+
+        .list-ustensile {
+          background-color: $redInput;
+        }
+      }
+    }
+
+    .data-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 3rem;
+      row-gap: 2rem;
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+
+      .card {
+        height: auto;
+        border-radius: 5px;
+        overflow: hidden;
+
+        &-image {
+          height: 150px;
+          background-color: $inputText;
+        }
+
+        &-text {
+          width: 100%;
+          min-height: 150px;
+          background-color: $inputBg;
+
+          .menu-layout {
+            width: 90%;
+            min-height: 150px;
+            margin: auto;
+
+            //  Première ligne
+            .menu {
+              display: flex;
+              justify-content: space-between;
+
+              &-title {
+                margin-top: 1rem;
+                font-size: 1.2rem;
+              }
+
+              &-timer {
+                margin-top: 1rem;
+                font-weight: bold;
+                font-size: 1.05rem;
+
+                i {
+                  font-size: 1.3rem;
+                }
+              }
+            }
+
+            .menu-info {
+              width: 100%;
+              display: flex;
+              column-gap: 1.5rem;
+              padding-bottom: 2rem;
+
+              .liste-element {
+                margin-top: 1rem;
+                width: 50%;
+
+                ul {
+                  li {
+                    font-size: 0.9rem;
+                    span {
+                      font-weight: bold;
+                    }
+                  }
+                }
+              }
+
+              .text-element {
+                margin-top: 1rem;
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+
+                p {
+                  overflow-wrap: anywhere;
+                  font-size: 0.9rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

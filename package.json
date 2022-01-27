@@ -1,0 +1,22 @@
+{
+  "name": "bilalezzaaraoui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bilalezzaaraoui/BilalEzzaaraoui_7_03012022.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bilalezzaaraoui/BilalEzzaaraoui_7_03012022/issues"
+  },
+  "homepage": "https://github.com/bilalezzaaraoui/BilalEzzaaraoui_7_03012022#readme",
+  "dependencies": {}
+}

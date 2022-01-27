@@ -1,0 +1,422 @@
+@media screen and (max-width: 820px) {
+  .tags-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tags-box .dropdown {
+    padding-bottom: 1rem;
+  }
+  .data-box {
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dropdown ul {
+    -ms-grid-columns: (1fr)[3] !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .data-box {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+  .menu-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu-info .liste-element {
+    width: auto !important;
+  }
+  .menu-info .text-element {
+    width: auto !important;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .dropdown ul {
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  width: 90%;
+  margin: auto;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+body header a {
+  margin-top: 2rem;
+}
+
+body header .logo-title {
+  margin: 0;
+  color: #d04f4f;
+}
+
+body main .input-box {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+body main .input-box ::-webkit-input-placeholder {
+  color: #adadad;
+  font-weight: normal;
+}
+
+body main .input-box :-ms-input-placeholder {
+  color: #adadad;
+  font-weight: normal;
+}
+
+body main .input-box ::-ms-input-placeholder {
+  color: #adadad;
+  font-weight: normal;
+}
+
+body main .input-box ::placeholder {
+  color: #adadad;
+  font-weight: normal;
+}
+
+body main .input-box input {
+  width: 100%;
+  background-color: #e7e7e7;
+  border: none;
+  padding: 1rem 0 1rem 1rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+body main .input-box input:focus {
+  outline: none;
+}
+
+body main .input-box .icon-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e7e7e7;
+  width: 60px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+body main .input-box .icon-box i {
+  font-size: 1.2rem;
+}
+
+body main .tags-icon-box {
+  width: 100%;
+  margin: 2rem 0 0 0;
+  position: relative;
+}
+
+body main .tags-icon-box ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main .tags-icon-box ul li {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  position: relative;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .tags-icon-box ul li i {
+  padding-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+body main .tags-icon-box ul .ingredients {
+  background-color: #3282f7;
+}
+
+body main .tags-icon-box ul .appareil {
+  background-color: #68d9a4;
+}
+
+body main .tags-icon-box ul .ustensile {
+  background-color: #ed6454;
+}
+
+body main .tags-box {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+body main .tags-box .dropdown {
+  position: relative;
+}
+
+body main .tags-box .dropdown .tags-container {
+  margin-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .tags-box .dropdown .tags-container ::-webkit-input-placeholder {
+  color: #fff;
+}
+
+body main .tags-box .dropdown .tags-container :-ms-input-placeholder {
+  color: #fff;
+}
+
+body main .tags-box .dropdown .tags-container ::-ms-input-placeholder {
+  color: #fff;
+}
+
+body main .tags-box .dropdown .tags-container ::placeholder {
+  color: #fff;
+}
+
+body main .tags-box .dropdown .tags-container input {
+  border: none;
+  padding: 0.8rem 0.4rem 0.8rem 1rem;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  color: #fff;
+  height: 3.5rem;
+}
+
+body main .tags-box .dropdown .tags-container input:focus {
+  outline: none;
+}
+
+body main .tags-box .dropdown .tags-container .tags-icon {
+  height: 3.5rem;
+  width: 30px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  position: relative;
+  right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+body main .tags-box .dropdown .tags-container .tags-icon i {
+  color: #fff;
+  font-weight: bold;
+}
+
+body main .tags-box .dropdown .ingredients input {
+  background-color: #3282f7;
+}
+
+body main .tags-box .dropdown .ingredients .tags-icon {
+  background-color: #3282f7;
+}
+
+body main .tags-box .dropdown .appareil input {
+  background-color: #68d9a4;
+}
+
+body main .tags-box .dropdown .appareil .tags-icon {
+  background-color: #68d9a4;
+}
+
+body main .tags-box .dropdown .ustensiles input {
+  background-color: #ed6454;
+}
+
+body main .tags-box .dropdown .ustensiles .tags-icon {
+  background-color: #ed6454;
+}
+
+body main .tags-box .dropdown ul {
+  z-index: 10;
+  margin-top: -0.1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  position: absolute;
+  padding: 1.5rem;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+body main .tags-box .dropdown ul li {
+  padding-bottom: 0.7rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+body main .tags-box .dropdown .list-ingredients {
+  background-color: #3282f7;
+}
+
+body main .tags-box .dropdown .list-appareil {
+  background-color: #68d9a4;
+}
+
+body main .tags-box .dropdown .list-ustensile {
+  background-color: #ed6454;
+}
+
+body main .data-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  row-gap: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+body main .data-box .card {
+  height: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+body main .data-box .card-image {
+  height: 150px;
+  background-color: #adadad;
+}
+
+body main .data-box .card-text {
+  width: 100%;
+  min-height: 150px;
+  background-color: #e7e7e7;
+}
+
+body main .data-box .card-text .menu-layout {
+  width: 90%;
+  min-height: 150px;
+  margin: auto;
+}
+
+body main .data-box .card-text .menu-layout .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .data-box .card-text .menu-layout .menu-title {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+body main .data-box .card-text .menu-layout .menu-timer {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+body main .data-box .card-text .menu-layout .menu-timer i {
+  font-size: 1.3rem;
+}
+
+body main .data-box .card-text .menu-layout .menu-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+body main .data-box .card-text .menu-layout .menu-info .liste-element {
+  margin-top: 1rem;
+  width: 50%;
+}
+
+body main .data-box .card-text .menu-layout .menu-info .liste-element ul li {
+  font-size: 0.9rem;
+}
+
+body main .data-box .card-text .menu-layout .menu-info .liste-element ul li span {
+  font-weight: bold;
+}
+
+body main .data-box .card-text .menu-layout .menu-info .text-element {
+  margin-top: 1rem;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main .data-box .card-text .menu-layout .menu-info .text-element p {
+  overflow-wrap: anywhere;
+  font-size: 0.9rem;
+}
+/*# sourceMappingURL=main.css.map */
